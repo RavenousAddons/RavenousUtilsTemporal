@@ -4,13 +4,11 @@ local hour = ns.Units.hour
 local minute = ns.Units.minute
 local second = ns.Units.second
 
---- Formats a duration in seconds to a "Xm Xs" string
--- @param {any} key
+--- Formats a number of seconds as a human-readable string
 -- @param {number} duration
--- @param {number|string} [timeFormat]
+-- @param {number|string} timeFormat
 -- @return {string}
-function ns:DurationFormat(key, duration, timeFormat)
-    timeFormat = timeFormat ~= nil and timeFormat or ns:OptionValue(key, "timeFormat")
+function ns:DurationFormat(duration, timeFormat)
     local hours = math.floor(duration / 3600)
     local minutes = math.floor(math.fmod(duration, 3600) / 60)
     local seconds = math.fmod(duration, 60)

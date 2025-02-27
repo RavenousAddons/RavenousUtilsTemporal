@@ -1,3 +1,3 @@
-# Ravenous Utilities
+# Ravenous Temporal Utilities
 
-A library of utility functions for WoW Addons.
+A library of temporal utility functions for WoW Addons.
